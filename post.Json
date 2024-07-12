@@ -1,0 +1,97 @@
+{
+  "info": {
+    "name": "EvaExchange API",
+    "_postman_id": "12345-67890-abcdef",
+    "description": "EvaExchange Trading API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Buy Stock",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"UserId\": \"user1\", \"Symbol\": \"ABC\", \"Quantity\": 10}"
+        },
+        "url": {
+          "raw": "https://localhost:7137/api/transactions/buy",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7137",
+          "path": [
+            "api",
+            "transactions",
+            "buy"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Sell Stock",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"UserId\": \"user1\", \"Symbol\": \"ABC\", \"Quantity\": 5}"
+        },
+        "url": {
+          "raw": "https://localhost:7137/api/transactions/sell",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7137",
+          "path": [
+            "api",
+            "transactions",
+            "sell"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Portfolio",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7137/api/transactions/portfolio?userId=user1",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7137",
+          "path": [
+            "api",
+            "transactions",
+            "portfolio"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "user1"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
